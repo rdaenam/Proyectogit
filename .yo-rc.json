@@ -1,0 +1,29 @@
+{
+  "generator-m-ionic": {
+    "answers": {
+      "appName": "ejemplo-karen",
+      "appId": "com.cgi.ejemplokaren",
+      "ionicCss": true,
+      "bowerPackages": [
+        "angular-dynamic-locale#~0.1.27",
+        "angular-translate#~2.11.0",
+        "angular-translate-loader-static-files#~2.11.0",
+        "localforage#~1.4.0"
+      ],
+      "platforms": [
+        "android",
+        "browser"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-inappbrowser",
+        "cordova-plugin-network-information",
+        "cordova-plugin-splashscreen"
+      ],
+      "appModule": "ejemploKaren",
+      "ecosystems": [
+        "ionic-cloud"
+      ]
+    }
+  }
+}

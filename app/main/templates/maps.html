@@ -1,0 +1,33 @@
+<ion-view view-title="Maps">
+    <ion-content>
+
+        <ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom" draggable="true">
+
+            <ui-gmap-markers models="vm.places" coords="'coordinates'" click="vm.onClick">
+                <ui-gmap-windows show="show">
+                    <div ng-non-bindable>
+                        <strong>{{name}}</strong>
+                        <p>{{vicinity}}</p>
+                        <p>Rating: {{rating}}/5</p>
+                        <p ng-if="opening_hours.open_now">Abierto ahora</p>
+                        <p ng-if="maps_url!=null">
+                            <a target="_blank" href="{{maps_url}}">
+                                Abrir en Google Maps
+                            </a>
+
+                        </p>
+                        <p>
+                            <a href="geo:{{coordinates.latitude}},{{coordinates.longitude}}?q={{coordinates.latitude}},{{coordinates.longitude}}({{name}})">
+                                Abrir Nativamente
+                            </a>
+
+                        </p>
+                    </div>
+
+                </ui-gmap-windows>
+            </ui-gmap-markers>
+        </ui-gmap-google-map>
+
+
+</ion-content>
+</ion-view>
